@@ -15,8 +15,8 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t CI-Travis-Ex1 .
-  - docker tag CI-Travis-Ex1 awais16/ci-travis-ex1:latest
+  - docker build -t ci-travis-ex1 .
+  - docker tag ci-travis-ex1 awais16/ci-travis-ex1:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
